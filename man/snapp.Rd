@@ -4,24 +4,19 @@
 \alias{snapp}
 \title{Run SNAP Shiny app examples}
 \usage{
-snapp(id)
+snapp(id, source = "local")
 }
 \arguments{
-\item{id}{character, the name of the application. See details.
+\item{id}{character, the name of the application. See \link{snapps} for available IDs.}
 
-There are X appsavailable maps:
-\describe{
-\item{\code{rv1}}{Distributions of random variables v1}
-\item{\code{rv2}}{Distributions of random variables v2}
-\item{\code{rv3}}{Distributions of random variables v3}
-\item{\code{rv4}}{Distributions of random variables v4}
-}}
+\item{source}{character, source of app. See details.}
 }
 \description{
 Launch a Shiny app in your browser.
 }
 \details{
-Available apps include:
+The \code{source} defaults to \code{"local"} for package apps. If set to \code{"remote"},
+\code{snapp} will launch the app in your browser using the canonical url rather than the package app.
 }
 \examples{
 \dontrun{snapp("rv4")}
