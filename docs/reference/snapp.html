@@ -198,26 +198,25 @@
     <p>Launch a Shiny app in your browser.</p>
     
 
-    <pre class="usage"><span class='fu'>snapp</span>(<span class='no'>id</span>)</pre>
+    <pre class="usage"><span class='fu'>snapp</span>(<span class='no'>id</span>, <span class='kw'>source</span> <span class='kw'>=</span> <span class='st'>"local"</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>id</th>
-      <td><p>character, the name of the application. See details.</p>
-<p>There are X appsavailable maps:</p><dl class='dl-horizontal'>
-<dt><code>rv1</code></dt><dd><p>Distributions of random variables v1</p></dd>
-<dt><code>rv2</code></dt><dd><p>Distributions of random variables v2</p></dd>
-<dt><code>rv3</code></dt><dd><p>Distributions of random variables v3</p></dd>
-<dt><code>rv4</code></dt><dd><p>Distributions of random variables v4</p></dd>
-</dl></td>
+      <td><p>character, the name of the application. See <a href='snapps.html'>snapps</a> for available IDs.</p></td>
+    </tr>
+    <tr>
+      <th>source</th>
+      <td><p>character, source of app. See details.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Available apps include:</p>
+    <p>The <code>source</code> defaults to <code>"local"</code> for package apps. If set to <code>"remote"</code>,
+<code>snapp</code> will launch the app in your browser using the canonical url rather than the package app.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>

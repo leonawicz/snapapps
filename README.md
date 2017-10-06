@@ -16,3 +16,44 @@ You can install snapapps from github with:
 # install.packages('devtools')
 devtools::install_github("leonawicz/snapapps")
 ```
+
+Running apps locally
+--------------------
+
+The purpose of `snapapps` is to give you easy access to local instances of SNAP Shiny apps that you can run in your browser. By installing `snapapps` you have local access to a number of Shiny apps. You can run apps in your browser simply by calling them by their respective IDs with `snapp`. For example, version four of the Distributions of Random Variables app:
+
+``` r
+library(snapapps)
+snapp("rv4")
+```
+
+The app also gives you access to all the apps' source code if you are an R user who learns by digging and is comfortable going through package source files. However, you may still find it much more convenient in this regard to simply fork the GitHub repository where most of the apps in `snapapps` originate.
+
+App information
+---------------
+
+The list of app IDs can be obtained `snapps`, which provides information about all of the apps in the collection. This function returns a data frame with columns that include app ID and short descriptions as well as a number of other pieces of relevant metadata. For brevity the first two columns are shown.
+
+``` r
+snapps()[1:2]
+#> # A tibble: 4 x 2
+#>      id                name
+#>   <chr>               <chr>
+#> 1   rv1 RV distributions v1
+#> 2   rv2 RV distributions v2
+#> 3   rv3 RV distributions v3
+#> 4   rv4 RV distributions v4
+```
+
+Accessing live versions online
+------------------------------
+
+One piece of information that is particularly useful is the canonical live link for an app. Currently, most SNAP Shiny apps are hosted on RStudio's `shinyapps.io` platform. While these urls appear in the metadata table, they can also be launched by passing `source = "remote"` to `snapp`.
+
+``` r
+snapp("rv4", source = "remote")
+```
+
+This will again launch the app in your browser, but this time via the canonical url. Apps hosated remotely on `shinyapps.io` generally take notably longer to load than local apps. This is another convenience of `snapapps`.
+
+One drawback is that some apps are too large to include in official form in `snapapps` as a consequence of the amount of data they use, or more likely, the amount of data they require access to. For example, an app may access data from a large data repository on Amazon Web Services using private keys that are not included in this package. For such an app to run locally, it must have a hardcopy of the data stored with it. In order to include these apps in the package, the data is cut drastically down to almost nothing. The app will be the same, but the data it offers is a shell in comparison to the canonical version hosted online.
