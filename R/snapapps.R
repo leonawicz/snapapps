@@ -1,16 +1,15 @@
 #' snapapps: Collection of SNAP Shiny apps.
 #'
-#' The \code{snapapps} package contains a collection of open source Shiny apps by Matthew Leonawicz at the Scenarios Network for Alaska and Arctic Planning,
-#' University of Alaska Fairabanks.
-#'
-#' Many of the apps in this package originate \url{https://github.com/ua-snap/shiny-apps}.
-#' \code{snapapps} is a member package in the apps and docs sector of the SNAPverse. Similar sector packages include \code{snapdash},
-#' \code{snapflex} and \code{snapdocs}.
+#' The \code{snapapps} package contains a collection of open source Shiny apps by Matthew Leonawicz at the
+#' Scenarios Network for Alaska and Arctic Planning, University of Alaska Fairbanks.
+#' It is a member package in the apps and docs sector of the SNAPverse collection of R packages.
+#' Many of the apps in this package originate from \url{https://github.com/ua-snap/shiny-apps}.
+#' Additional apps can be found in other SNAPverse apps and docs sector packages.
+#' Related sector packages include \code{snapdash}, \code{snapflex} and \code{snapdocs}.
 #'
 #' @docType package
 #' @name snapapps
 NULL
-
 
 #' Run SNAP Shiny app examples
 #'
