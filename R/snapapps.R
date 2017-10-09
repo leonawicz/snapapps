@@ -54,15 +54,15 @@ snapp <- function(id, source = "local") {
 #' @examples
 #' snapps()
 snapps <- function(){
-  id <- c("rv1", "rv2", "rv3", "rv4")
+  id <- c("rv", "rv1", "rv2", "rv3", "rv4")
   name <- paste0("RV distributions v", 1:4)
   canonical <- "https://uasnap.shinyapps.io/"
   redirect <- "http://shiny.snap.uaf.edu/"
-  url <- paste("RV_distributions", c("", "V2", "V3", "V4"))
+  url <- c("rvdist", paste("RV_distributions", c("", "V2", "V3", "V4")))
   redirect <- paste0(redirect, url)
   url <- paste0(canonical, url)
-  status <- rep("complete", 4)
-  desc <- paste("RV distributions app version", 1:4)
+  status <- rep("complete", 5)
+  desc <- c("RV distributions app (official)", paste("RV distributions app version", 1:4))
   tibble::data_frame(id = id, name = name, description = desc, url = url,
                      redirect = redirect, status = status)
 }
