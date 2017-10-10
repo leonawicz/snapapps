@@ -1,3 +1,15 @@
+# snapapps 0.2.0 (Release date: 2017-10-10)
+
+* Added `snapp_resources` for assisting packaged apps with resource paths and shared resources.
+* Added five initial Shiny apps to the collection.
+    * Updated any issues and minor bugs with the legacy apps that were included (RV distributions 1 - 4).
+    * Included a new version of RV distributions example app.
+* Added support for Shiny showcase display mode with app metadata, descriptions and reactive code highlighting.
+* Added resource files for images shared between package apps.
+* Updated documentation.
+* Added unit tests.
+* Minor bug fixes.
+
 # snapapps 0.1.0
 
 * Added `snapp` for launching apps.
