@@ -45,7 +45,7 @@ The app also gives you access to all the apps' source code if you are an R user 
 An easy way to view the source code is side by side or directly below the app content in your browser by running the app in showcase mode.
 Showcase mode will also present additional, concise app metadata and description.
 
-```{r local, eval = FALSE}
+```{r showcase, eval = FALSE}
 library(snapapps)
 snapp("rv4", local_mode = "showcase")
 ```
