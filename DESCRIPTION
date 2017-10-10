@@ -18,14 +18,18 @@ Suggests:
     testthat,
     knitr,
     rmarkdown,
-    covr,
-    snapmeta
+    covr
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
 Imports: 
     shiny,
     tibble,
+    ggplot2,
     shinythemes,
     VGAM,
     apputils,
     snaputils
+Remotes:
+    leonawicz/apputils,
+    leonawicz/snaputils,
+    tidyverse/ggplot2
