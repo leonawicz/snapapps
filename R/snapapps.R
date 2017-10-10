@@ -32,7 +32,7 @@ snapp <- function(id, source = "local", local_mode = "normal") {
   if(!local_mode %in% c("normal", "showcase"))
     stop("`local_mode` must be 'normal' or 'showcase'.")
   x <- snapps()
-  if(!id %in% x$id) stop("Invalid app `id`. See snapps() for available apps.")
+  if(!id %in% x$id) stop("Invalid app `id`. See `snapps` for available apps.")
   url <- x$url[x$id == id]
   id2 <- basename(url)
   if(source == "remote"){
