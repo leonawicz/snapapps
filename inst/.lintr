@@ -5,15 +5,14 @@ linters: with_defaults(
   snake_case_linter = NULL,
   spaces_left_parentheses_linter=NULL)
 exclusions: list(
-  "inst/shiny-examples/rvdist/server.R",
-  "inst/shiny-examples/rvdist/ui.R",
-  "inst/shiny-examples/rvdist/definitions.R",
-  "inst/shiny-examples/RV_distributions/server.R",
-  "inst/shiny-examples/RV_distributionsV2/server.R",
-  "inst/shiny-examples/RV_distributionsV3/server.R",
-  "inst/shiny-examples/RV_distributionsV4/server.R",
-  "inst/shiny-examples/RV_distributions/ui.R",
-  "inst/shiny-examples/RV_distributionsV2/ui.R",
-  "inst/shiny-examples/RV_distributionsV3/ui.R",
-  "inst/shiny-examples/RV_distributionsV4/ui.R",
-  "inst/shiny-examples/RV_distributionsV4/about.r")
+  "inst/shiny/rvdist/server.R",
+  "inst/shiny/rvdist/ui.R",
+  "inst/shiny/rvdist/definitions.R",
+  "inst/shiny/RV_distributions/server.R",
+  "inst/shiny/RV_distributionsV2/server.R",
+  "inst/shiny/RV_distributionsV3/server.R",
+  "inst/shiny/RV_distributionsV4/server.R",
+  "inst/shiny/RV_distributions/ui.R",
+  "inst/shiny/RV_distributionsV2/ui.R",
+  "inst/shiny/RV_distributionsV3/ui.R",
+  "inst/shiny/RV_distributionsV4/ui.R")
