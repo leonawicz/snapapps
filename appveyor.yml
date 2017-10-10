@@ -21,6 +21,8 @@ environment:
     USE_RTOOLS: true
 
 build_script:
+  - travis-tool.sh install_github tidyverse/ggplot2
+  - travis-tool.sh install_github leonawicz/snaputils
   - travis-tool.sh install_deps
 
 test_script:
