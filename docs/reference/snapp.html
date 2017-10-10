@@ -198,7 +198,7 @@
     <p>Launch a Shiny app in your browser.</p>
     
 
-    <pre class="usage"><span class='fu'>snapp</span>(<span class='no'>id</span>, <span class='kw'>source</span> <span class='kw'>=</span> <span class='st'>"local"</span>)</pre>
+    <pre class="usage"><span class='fu'>snapp</span>(<span class='no'>id</span>, <span class='kw'>source</span> <span class='kw'>=</span> <span class='st'>"local"</span>, <span class='kw'>local_mode</span> <span class='kw'>=</span> <span class='st'>"normal"</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
     <table class="ref-arguments">
@@ -211,12 +211,18 @@
       <th>source</th>
       <td><p>character, source of app. See details.</p></td>
     </tr>
+    <tr>
+      <th>local_mode</th>
+      <td><p>character, display mode.</p></td>
+    </tr>
     </table>
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The <code>source</code> defaults to <code>"local"</code> for package apps. If set to <code>"remote"</code>,
-<code>snapp</code> will launch the app in your browser using the canonical url rather than the package app.</p>
+<code>snapp</code> will launch the app in your browser using the canonical url rather than the package app.
+Options for <code>local_mode</code> are <code>"normal"</code> (default) or <code>"showcase"</code>
+for tandem reactive code highlighting, and metadata if applicable. <code>local_mode</code> applies to <code>source = "local"</code> package apps.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
