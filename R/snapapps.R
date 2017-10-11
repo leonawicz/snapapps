@@ -64,7 +64,7 @@ snapps <- function(){
   name <- c("RV distributions", paste0("RV distributions v", 1:4))
   canonical <- "https://uasnap.shinyapps.io/"
   redirect <- "http://shiny.snap.uaf.edu/"
-  url <- c("rvdist", paste("RV_distributions", c("", "V2", "V3", "V4")))
+  url <- c("rvdist", paste("RV_distributions", c("", "_V2", "_V3", "_V4")))
   redirect <- paste0(redirect, url)
   url <- paste0(canonical, url)
   status <- rep("complete", 5)
