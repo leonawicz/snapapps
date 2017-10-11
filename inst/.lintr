@@ -15,4 +15,8 @@ exclusions: list(
   "inst/shiny/RV_distributions/ui.R",
   "inst/shiny/RV_distributionsV2/ui.R",
   "inst/shiny/RV_distributionsV3/ui.R",
-  "inst/shiny/RV_distributionsV4/ui.R")
+  "inst/shiny/RV_distributionsV4/ui.R",
+  "inst/shiny/tree_rings/global.R",
+  "inst/shiny/tree_rings/ui.R",
+  "inst/shiny/tree_rings/server.R",
+  "inst/shiny/tree_rings/plot.R")
