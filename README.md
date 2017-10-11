@@ -30,7 +30,6 @@ snapp("rv4")
 The package also gives you access to app source code if you are an R user who learns by digging and is comfortable going through package source files. An easy way to view the source code is side by side or directly below the app content in your browser by running the app in showcase mode. Showcase mode will also present additional, concise app metadata and description.
 
 ``` r
-library(snapapps)
 snapp("rv4", local_mode = "showcase")
 ```
 
@@ -39,18 +38,21 @@ However, you may still find it much more convenient in this regard to simply for
 App information
 ---------------
 
-The list of app IDs can be obtained with `snapps`, which provides information about all of the apps in the collection. This function returns a data frame with columns that include app ID and short descriptions as well as a number of other pieces of relevant metadata. For brevity the first two columns are shown.
+The list of app IDs can be obtained with `snapps`, which provides information about all of the apps in the collection. This function returns a data frame with columns that include app ID and short descriptions as well as a number of other pieces of relevant metadata.
 
 ``` r
-snapps()[1:2]
-#> # A tibble: 5 x 2
-#>      id                name
-#>   <chr>               <chr>
-#> 1    rv    RV distributions
-#> 2   rv1 RV distributions v1
-#> 3   rv2 RV distributions v2
-#> 4   rv3 RV distributions v3
-#> 5   rv4 RV distributions v4
+snapps()
+#> # A tibble: 6 x 8
+#>          id                         name
+#>       <chr>                        <chr>
+#> 1        rv  RV distributions (official)
+#> 2       rv1 RV distributions (legacy) v1
+#> 3       rv2 RV distributions (legacy) v2
+#> 4       rv3 RV distributions (legacy) v3
+#> 5       rv4 RV distributions (legacy) v4
+#> 6 treerings                   Tree rings
+#> # ... with 6 more variables: description <chr>, published <dbl>,
+#> #   revised <dbl>, status <chr>, url <chr>, redirect <chr>
 ```
 
 Accessing live versions online
