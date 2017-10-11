@@ -50,9 +50,9 @@ snapp <- function(id, source = "local", local_mode = "normal") {
 #' Basic metadata for all apps in snapapps
 #'
 #' This function returns a data frame with basic meta data for all Shiny apps in \code{snapapps}.
-#' This includes app ID, name, short description, canonical remote url, redirect url and an indication of whether the app
-#' is complete or partial with respect to the canonical app.
-#' For example, did the local app require available data sets to be reduced or removed for inclusion in \code{snapapps}?
+#' This includes app ID, name, short description, date originally published, date most recently revised,
+#' canonical remote url, redirect url, and an indication of whether the app is complete or partial with respect to the canonical app.
+#' For example, did the local app require available data sets to be reduced or removed the minimize its size in \code{snapapps}?
 #'
 #' @return a data frame.
 #' @export
@@ -60,17 +60,22 @@ snapp <- function(id, source = "local", local_mode = "normal") {
 #' @examples
 #' snapps()
 snapps <- function(){
-  id <- c("rv", "rv1", "rv2", "rv3", "rv4")
-  name <- c("RV distributions", paste0("RV distributions v", 1:4))
-  canonical <- "https://uasnap.shinyapps.io/"
-  redirect <- "http://shiny.snap.uaf.edu/"
-  url <- c("rvdist", paste0("RV_distributions", c("", "V2", "V3", "V4")))
-  redirect <- paste0(redirect, url)
-  url <- paste0(canonical, url)
-  status <- rep("complete", 5)
-  desc <- c("RV distributions app (official)", paste("RV distributions app version", 1:4))
-  tibble::data_frame(id = id, name = name, description = desc, url = url,
-                     redirect = redirect, status = status)
+  urls <- .snapp_url()
+  tibble::data_frame(id = .snapp_id, name = .snapp_name, description = .snapp_desc,
+                     published = .snapp_pubdate, revised = .snapp_revdate, status = .snapp_status,
+                     url = urls$url, redirect = urls$redirect)
+}
+
+.snapp_id <- c("rv", "rv1", "rv2", "rv3", "rv4", "treerings")
+.snapp_name <- c("RV distributions (official)", paste0("RV distributions (legacy) v", 1:4), "Tree rings")
+.snapp_desc <- c(rep("Distributions of random variables", 5), "Climate and tree growth correlations")
+.snapp_basename <- c("rvdist", paste0("RV_distributions", c("", "V2", "V3", "V4")), "tree_rings")
+.snapp_pubdate <- c(2017, rep(2013, 5))
+.snapp_revdate <- rep(2017, 6)
+.snapp_status <- rep("complete", 6)
+.snapp_url <- function(canonical = "https://uasnap.shinyapps.io/",
+                        redirect = "http://shiny.snap.uaf.edu/"){
+  list(url = paste0(canonical, .snapp_basename), redirect = paste0(redirect, .snapp_basename))
 }
 
 #' Get a snapapps resource path
