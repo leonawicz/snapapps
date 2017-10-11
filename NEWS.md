@@ -1,3 +1,7 @@
+# snapapps 0.2.1 (Release date: 2017-10-11)
+
+* Added a revised version of the simplistic 2013 `tree_rings` example app.
+
 # snapapps 0.2.0 (Release date: 2017-10-10)
 
 * Added `snapp_resources` for assisting packaged apps with resource paths and shared resources.
