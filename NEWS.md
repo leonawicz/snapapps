@@ -2,6 +2,7 @@
 
 * Added a column `rating` to the metadata table returned by `snapps`, providing an app complexity rating with levels: `Beginner`, `Intermediate`, `Advanced` and `Developer`.
 * Updated readme.
+* Added unit test for remote app launch.
 
 # snapapps 0.2.1 (Release date: 2017-10-11)
 
