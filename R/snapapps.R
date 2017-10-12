@@ -42,8 +42,6 @@ snapp <- function(id, source = "local", local_mode = "normal") {
     return(invisible())
   }
   appDir <- system.file("shiny", id2, package = "snapapps")
-  if (appDir == "")
-    stop("Could not find apps directory. Try re-installing `snapapps`.", call. = FALSE)
   shiny::runApp(appDir, display.mode = local_mode)
 }
 
