@@ -11,9 +11,10 @@ test_that("snapp returns expected errors", {
 
 test_that("metadata returns as expected", {
   x <- snapps()
+  y <- c("id", "name", "description", "published", "revised", "rating", "status", "url", "redirect")
   expect_is(x, "tbl_df")
-  expect_equal(ncol(x), 8)
-  expect_true(all(c("id", "name", "description", "published", "revised", "status", "url", "redirect") %in% names(x)))
+  expect_equal(ncol(x), 9)
+  expect_true(all(y %in% names(x)))
 })
 
 test_that("resource paths are returned", {
