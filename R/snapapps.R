@@ -41,8 +41,7 @@ snapp <- function(id, source = "local", local_mode = "normal") {
     cat(paste(name, "launched remotely.\n"))
     return(invisible())
   }
-  appDir <- system.file("shiny", id2, package = "snapapps")
-  shiny::runApp(appDir, display.mode = local_mode)
+  shiny::runApp(system.file("shiny", id2, package = "snapapps"), display.mode = local_mode)
 }
 
 #' Basic metadata for all apps in snapapps
