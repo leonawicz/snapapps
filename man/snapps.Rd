@@ -11,7 +11,7 @@ a data frame.
 }
 \description{
 This function returns a data frame with basic meta data for all Shiny apps in \code{snapapps}.
-This includes app ID, name, short description, date originally published, date most recently revised,
+This includes app ID, name, short description, date originally published, date most recently revised, app complexity rating,
 canonical remote url, redirect url, and an indication of whether the app is complete or partial with respect to the canonical app.
 For example, did the local app require available data sets to be reduced or removed the minimize its size in \code{snapapps}?
 }
