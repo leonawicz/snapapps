@@ -44,7 +44,7 @@ The list of app IDs can be obtained with `snapps`, which provides information ab
 
 ``` r
 snapps()
-#> # A tibble: 6 x 8
+#> # A tibble: 6 x 9
 #>          id                         name
 #>       <chr>                        <chr>
 #> 1        rv  RV distributions (official)
@@ -53,8 +53,8 @@ snapps()
 #> 4       rv3 RV distributions (legacy) v3
 #> 5       rv4 RV distributions (legacy) v4
 #> 6 treerings                   Tree rings
-#> # ... with 6 more variables: description <chr>, published <dbl>,
-#> #   revised <dbl>, status <chr>, url <chr>, redirect <chr>
+#> # ... with 7 more variables: description <chr>, published <dbl>,
+#> #   revised <dbl>, rating <fctr>, status <chr>, url <chr>, redirect <chr>
 ```
 
 Accessing live versions online
