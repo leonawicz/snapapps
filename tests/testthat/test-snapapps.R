@@ -9,6 +9,10 @@ test_that("snapp returns expected errors", {
   expect_error(snapp("a", source = "remote", local_mode = "b"), err2)
 })
 
+test_that("app launch returns as expected", {
+  expect_identical(snapp("rv", source = "remote"), NULL)
+})
+
 test_that("metadata returns as expected", {
   x <- snapps()
   y <- c("id", "name", "description", "published", "revised", "rating", "status", "url", "redirect")
