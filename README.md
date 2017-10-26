@@ -7,7 +7,7 @@ snapapps
 
 The `snapapps` package contains a collection of open source Shiny apps by Matthew Leonawicz at the Scenarios Network for Alaska and Arctic Planning, University of Alaska Fairbanks. It is a member package in the apps and docs sector of the SNAPverse collection of R packages. Many of the apps in this package originate from the SNAP open source Shiny apps [GitHub repository](https://github.com/ua-snap/shiny-apps). Additional apps can be found in other related packages including `snapdash`, `snapflex` and `snapdocs`.
 
-I am slowly adding more apps to this package. Like much of the SNAPverse, `snapapps` is currently an early work in progress. As of version 0.2.1 it only contains five of my most basic app examples.
+I am slowly adding more apps to this package. Like much of the SNAPverse, `snapapps` is currently an early work in progress.
 
 Installation
 ------------
@@ -44,15 +44,18 @@ The list of app IDs can be obtained with `snapps`, which provides information ab
 
 ``` r
 snapps()
-#> # A tibble: 6 x 9
+#> # A tibble: 9 x 9
 #>          id                         name
 #>       <chr>                        <chr>
 #> 1        rv  RV distributions (official)
-#> 2       rv1 RV distributions (legacy) v1
-#> 3       rv2 RV distributions (legacy) v2
-#> 4       rv3 RV distributions (legacy) v3
-#> 5       rv4 RV distributions (legacy) v4
-#> 6 treerings                   Tree rings
+#> 2       twe         Temperature and wind
+#> 3       sic             Sea ice coverage
+#> 4       siw             Sea ice and wind
+#> 5       rv1 RV distributions (legacy) v1
+#> 6       rv2 RV distributions (legacy) v2
+#> 7       rv3 RV distributions (legacy) v3
+#> 8       rv4 RV distributions (legacy) v4
+#> 9 treerings                   Tree rings
 #> # ... with 7 more variables: description <chr>, published <dbl>,
 #> #   revised <dbl>, rating <fctr>, status <chr>, url <chr>, redirect <chr>
 ```
