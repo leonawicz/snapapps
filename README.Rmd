@@ -19,7 +19,6 @@ knitr::opts_chunk$set(
 The `snapapps` package contains a collection of open source Shiny apps by Matthew Leonawicz at the Scenarios Network for Alaska and Arctic Planning, University of Alaska Fairbanks. It is a member package in the apps and docs sector of the SNAPverse collection of R packages. Many of the apps in this package originate from the SNAP open source Shiny apps [GitHub repository](https://github.com/ua-snap/shiny-apps). Additional apps can be found in other related packages including `snapdash`, `snapflex` and `snapdocs`.
 
 I am slowly adding more apps to this package. Like much of the SNAPverse, `snapapps` is currently an early work in progress.
-As of version 0.2.1 it only contains five of my most basic app examples.
 
 ## Installation
 
