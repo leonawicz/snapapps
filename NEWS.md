@@ -1,3 +1,11 @@
+# snapapps 0.2.5 (Release date: 2017-10-26)
+
+* Added three more early Shiny apps (2013). These and were all part of the same marine coastal climate downscaling project.
+    * Alaska temperature and extreme wind events
+    * Alaska sea ice coverage totals and spatial extent
+    * Alaska sea ice and extreme wind events
+* Updated metadata and documentation.
+
 # snapapps 0.2.2 (Release date: 2017-10-12)
 
 * Added a column `rating` to the metadata table returned by `snapps`, providing an app complexity rating with levels: `Beginner`, `Intermediate`, `Advanced` and `Developer`.
