@@ -19,4 +19,17 @@ exclusions: list(
   "inst/shiny/tree_rings/global.R",
   "inst/shiny/tree_rings/ui.R",
   "inst/shiny/tree_rings/server.R",
-  "inst/shiny/tree_rings/plot.R")
+  "inst/shiny/tree_rings/plot.R",
+  "inst/shiny/temp_wind_events/global.R",
+  "inst/shiny/temp_wind_events/ui.R",
+  "inst/shiny/temp_wind_events/server.R",
+  "inst/shiny/temp_wind_events/about.R",
+  "inst/shiny/sea_ice_winds/global.R",
+  "inst/shiny/sea_ice_winds/ui.R",
+  "inst/shiny/sea_ice_winds/server.R",
+  "inst/shiny/sea_ice_winds/about.R",
+  "inst/shiny/sea_ice_coverage/global.R",
+  "inst/shiny/sea_ice_coverage/ui.R",
+  "inst/shiny/sea_ice_coverage/server.R",
+  "inst/shiny/sea_ice_coverage/about.R"
+  )
