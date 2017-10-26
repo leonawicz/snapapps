@@ -63,15 +63,22 @@ snapps <- function(){
                      status = .snapp_status, url = urls$url, redirect = urls$redirect)
 }
 
-.snapp_id <- c("rv", "rv1", "rv2", "rv3", "rv4", "treerings")
-.snapp_name <- c("RV distributions (official)", paste0("RV distributions (legacy) v", 1:4), "Tree rings")
-.snapp_desc <- c(rep("Distributions of random variables", 5), "Climate and tree growth correlations")
-.snapp_basename <- c("rvdist", paste0("RV_distributions", c("", "V2", "V3", "V4")), "tree_rings")
-.snapp_pubdate <- c(2017, rep(2013, 5))
-.snapp_revdate <- rep(2017, 6)
-.snapp_status <- rep("complete", 6)
+.snapp_id <- c("rv", "twe", "sic", "siw", "rv1", "rv2", "rv3", "rv4", "treerings")
+.snapp_name <- c("RV distributions (official)", "Temperature and wind", "Sea ice coverage", "Sea ice and wind",
+                 paste0("RV distributions (legacy) v", 1:4), "Tree rings")
+.snapp_desc <- c("Distributions of random variables",
+                 "Coastal Alaska extreme temperatures and winds", "Alaska sea ice coverage totals",
+                 "Coastal Alaska sea ice and winds",
+                 rep("Distributions of random variables", 4), "Climate and tree growth correlations")
+.snapp_basename <- c("rvdist", "temp_wind_events", "sea_ice_coverage", "sea_ice_winds",
+                     paste0("RV_distributions", c("", "V2", "V3", "V4")), "tree_rings")
+.snapp_pubdate <- c(2017, rep(2013, 8))
+.snapp_revdate <- rep(2017, 9)
+.snapp_status <- rep("complete", 9)
 .snapp_levels <- c("Beginner", "Intermediate", "Advanced", "Developer")
-.snapp_rating <- factor(rep(.snapp_levels[1], 6), levels = .snapp_levels)
+.snapp_rating <- factor(
+  c(.snapp_levels[1], rep(.snapp_levels[2], 3), rep(.snapp_levels[1], 5)),
+  levels = .snapp_levels)
 .snapp_url <- function(canonical = "https://uasnap.shinyapps.io/",
                         redirect = "http://shiny.snap.uaf.edu/"){
   list(url = paste0(canonical, .snapp_basename), redirect = paste0(redirect, .snapp_basename))
