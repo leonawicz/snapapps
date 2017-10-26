@@ -1,4 +1,5 @@
 library(shinythemes)
+library(snapapps) # for shinyapps.io
 addResourcePath("res", snapp_resources("images"))
 
 tabPanelAbout <- source("about.R")$value
