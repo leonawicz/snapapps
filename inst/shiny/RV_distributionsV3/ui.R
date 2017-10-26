@@ -5,7 +5,7 @@ library(shinythemes)
 shinyUI(fluidPage(theme=shinytheme("united"),
 	headerPanel(
 		HTML('Distributions of Random Variables v3
-			<a href="http://snap.uaf.edu" target="_blank"><img align="right" src="app-resources/images/snap_acronym_color.svg" height="35px"/></a>'
+			<a href="http://snap.uaf.edu" target="_blank"><img align="right" src="res/snap_acronym_color.svg" height="35px"/></a>'
 		), "Distributions of Random Variables"
 	),
 	fluidRow(
