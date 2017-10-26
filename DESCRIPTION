@@ -25,8 +25,17 @@ Imports:
     shiny,
     tibble,
     ggplot2,
+    reshape2,
+    dplyr,
     shinythemes,
     VGAM,
+    rgdal,
+    raster,
+    rasterVis,
+    maps,
+    mapproj,
+    maptools,
+    grid,
     apputils,
     snaputils
 Remotes:
