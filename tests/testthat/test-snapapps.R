@@ -15,8 +15,8 @@ test_that("app launch returns as expected", {
 
 test_that("metadata returns as expected", {
   x <- snapps()
-  y <- c("id", "name", "description", "published", "revised", "rating", "status", "url", "redirect")
+  y <- c("id", "name", "description", "published", "revised", "rating", "status", "aws", "url", "redirect")
   expect_is(x, "tbl_df")
-  expect_equal(ncol(x), 9)
+  expect_equal(ncol(x), 10)
   expect_true(all(y %in% names(x)))
 })
