@@ -1,3 +1,10 @@
+# snapapps 0.2.6 (Release date: 2017-10-27)
+
+* Refactored package code and resources, moving SNAP-related image files and accessor function to `snaputils` package. This frees up packages in `snapapps` that are used directly for hosting canonical apps on shinyapps.io from having to load `snapapps` to access a logo. By loading `snaputils` instead, shinyapps.io does not need to install all the "supporting" packages imported by `snapapps` (required for all apps in combination).
+* Updated documentation and added minimal vignette content.
+* Added an Amazon Web Services data source indicator column in the `snapps` metadata table.
+* Minor updates to package apps.
+
 # snapapps 0.2.5 (Release date: 2017-10-26)
 
 * Added three more early Shiny apps (2013). These and were all part of the same marine coastal climate downscaling project.
