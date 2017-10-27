@@ -47,9 +47,22 @@ snapp <- function(id, source = "local", local_mode = "normal") {
 #' Basic metadata for all apps in snapapps
 #'
 #' This function returns a data frame with basic meta data for all Shiny apps in \code{snapapps}.
-#' This includes app ID, name, short description, date originally published, date most recently revised, app complexity rating,
-#' canonical remote url, redirect url, and an indication of whether the app is complete or partial with respect to the canonical app.
-#' For example, did the local app require available data sets to be reduced or removed the minimize its size in \code{snapapps}?
+#' This includes the following information:
+#'
+#' \itemize{
+#'   \item the app ID used for launching an app via \code{snapp}.
+#'   \item the app name.
+#'   \item a short description.
+#'   \item date originally published.
+#'   \item date most recently revised.
+#'   \item app complexity rating: \code{beginner}, \code{intermediate}, \code{advanced} or \code{developer}.
+#'   \item a status indicator of whether the app is \code{complete} or \code{partial} with respect to the canonical hosted app.
+#'   For example, did the local app require available data sets to be reduced or removed the minimize its size in \code{snapapps}?
+#'   \item an indicator of whether the app relies on publicly accessible data stored on Amazon Web Services in order to minimize package size.
+#'   When possible, AWS is used to ensure a packaged app can be offered as \code{complete}.
+#'   \item the canonical remote url.
+#'   \item the redirect url.
+#' }
 #'
 #' @return a data frame.
 #' @export
@@ -60,10 +73,10 @@ snapps <- function(){
   urls <- .snapp_url()
   tibble::data_frame(id = .snapp_id, name = .snapp_name, description = .snapp_desc,
                      published = .snapp_pubdate, revised = .snapp_revdate, rating = .snapp_rating,
-                     status = .snapp_status, url = urls$url, redirect = urls$redirect)
+                     status = .snapp_status, aws = .snapp_aws, url = urls$url, redirect = urls$redirect)
 }
 
-.snapp_id <- c("rv", "twe", "sic", "siw", "rv1", "rv2", "rv3", "rv4", "treerings")
+.snapp_id <- c("rv", "twe", "sic", "siw", "rv1", "rv2", "rv3", "rv4", "tring")
 .snapp_name <- c("RV distributions (official)", "Temperature and wind", "Sea ice coverage", "Sea ice and wind",
                  paste0("RV distributions (legacy) v", 1:4), "Tree rings")
 .snapp_desc <- c("Distributions of random variables",
@@ -75,6 +88,7 @@ snapps <- function(){
 .snapp_pubdate <- c(2017, rep(2013, 8))
 .snapp_revdate <- rep(2017, 9)
 .snapp_status <- rep("complete", 9)
+.snapp_aws <- c(FALSE, rep(TRUE, 3), rep(FALSE, 5))
 .snapp_levels <- c("Beginner", "Intermediate", "Advanced", "Developer")
 .snapp_rating <- factor(
   c(.snapp_levels[1], rep(.snapp_levels[2], 3), rep(.snapp_levels[1], 5)),
@@ -82,26 +96,4 @@ snapps <- function(){
 .snapp_url <- function(canonical = "https://uasnap.shinyapps.io/",
                         redirect = "http://shiny.snap.uaf.edu/"){
   list(url = paste0(canonical, .snapp_basename), redirect = paste0(redirect, .snapp_basename))
-}
-
-#' Get a snapapps resource path
-#'
-#' Get a resource path in an app to local package resources.
-#'
-#' This function is typically called in an app that has been imported into the \code{snapapps} package.
-#' While external apps may not share all common resources, once they are moved into the package it can be more efficient to have
-#' only a single copy of a resource such as an image file and alter the code of each relevant app to point to that package file.
-#'
-#' This function is only used during development to allow included apps to share common resources.
-#' For applicable apps, you will find a call to this function near the top of \code{ui.R}, which would not be found in a
-#' version of the app outside of this package.
-#'
-#' @param type character, resource type. \code{"images"} is the only currently available resource type.
-#'
-#' @export
-#'
-#' @examples
-#' \dontrun{snapp_resources()}
-snapp_resources <- function(type = "images"){
-  system.file(file.path("res", type), package = "snapapps")
 }

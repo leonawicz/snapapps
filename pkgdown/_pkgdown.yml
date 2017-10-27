@@ -22,9 +22,6 @@ reference:
 - title: Launch apps
   contents:
   - snapp
-- title: Dev support
-  contents:
-  - snapp_resources
 
 navbar:
   type: inverse

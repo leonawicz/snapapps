@@ -11,9 +11,23 @@ a data frame.
 }
 \description{
 This function returns a data frame with basic meta data for all Shiny apps in \code{snapapps}.
-This includes app ID, name, short description, date originally published, date most recently revised, app complexity rating,
-canonical remote url, redirect url, and an indication of whether the app is complete or partial with respect to the canonical app.
-For example, did the local app require available data sets to be reduced or removed the minimize its size in \code{snapapps}?
+This includes the following information:
+}
+\details{
+\itemize{
+  \item the app ID used for launching an app via \code{snapp}.
+  \item the app name.
+  \item a short description.
+  \item date originally published.
+  \item date most recently revised.
+  \item app complexity rating: \code{beginner}, \code{intermediate}, \code{advanced} or \code{developer}.
+  \item a status indicator of whether the app is \code{complete} or \code{partial} with respect to the canonical hosted app.
+  For example, did the local app require available data sets to be reduced or removed the minimize its size in \code{snapapps}?
+  \item an indicator of whether the app relies on publicly accessible data stored on Amazon Web Services in order to minimize package size.
+  When possible, AWS is used to ensure a packaged app can be offered as \code{complete}.
+  \item the canonical remote url.
+  \item the redirect url.
+}
 }
 \examples{
 snapps()

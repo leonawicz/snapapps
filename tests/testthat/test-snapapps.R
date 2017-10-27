@@ -20,9 +20,3 @@ test_that("metadata returns as expected", {
   expect_equal(ncol(x), 9)
   expect_true(all(y %in% names(x)))
 })
-
-test_that("resource paths are returned", {
-  x <- snapp_resources()
-  expect_is(x, "character")
-  expect_identical(basename(x), "images")
-})
