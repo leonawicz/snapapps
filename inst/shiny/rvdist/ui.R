@@ -1,4 +1,6 @@
-addResourcePath("res", snapp_resources("images"))
+library(apputils)
+library(snaputils)
+addResourcePath("res", snap_res("images"))
 
 about_app <- HTML("<p style='align-justify'>This app is a 2017 revision and simplicification of the early 2013 random variables versions 1 - 4 apps series. It plots probability density and mass functions for various continuous and discrete random variables based on your specified distribution parameters.</p>")
 vx <- c("", "V2", "V3", "V4")
@@ -9,8 +11,6 @@ old_subs <- rep("Probability distributions", 4)
 old_labs <- lapply(paste("RVs version", 1:4), h4)
 app_title <- "Distributions of random variables"
 
-library(apputils)
-library(snaputils)
 shinyUI(fluidPage(title = app_title,
   use_apputils(),
 	fluidRow(column(12,

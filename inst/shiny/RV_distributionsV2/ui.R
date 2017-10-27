@@ -1,7 +1,8 @@
 library(shiny)
-addResourcePath("res", snapp_resources("images"))
-
 library(shinythemes)
+library(snaputils)
+addResourcePath("res", snap_res("images"))
+
 shinyUI(fluidPage(theme=shinytheme("united"),
 	headerPanel(
 		HTML('Distributions of Random Variables v2

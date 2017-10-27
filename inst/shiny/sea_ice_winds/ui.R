@@ -1,6 +1,6 @@
 library(shinythemes)
-library(snapapps) # for shinyapps.io
-addResourcePath("res", snapp_resources("images"))
+library(snaputils)
+addResourcePath("res", snap_res("images"))
 
 tabPanelAbout <- source("about.R", local  =  TRUE)$value
 
@@ -14,7 +14,7 @@ headerPanel_2 <- function(title, h, windowTitle  =  title) {
 shinyUI(fluidPage(theme = shinytheme("spacelab"),
 	headerPanel_2(
 		HTML('Sea Ice Concentrations and Wind Events
-			<a href="http://accap.uaf.edu" target="_blank"><img align="right" style="margin-left: 15px;" src="res/ACCAP_acronym_100px.png" /></a>
+			<a href="http://accap.uaf.edu" target="_blank"><img align="right" style="margin-left: 15px;" src="res/accap.png" /></a>
 			<a href="http://snap.uaf.edu" target="_blank"><img align="right" src="res/snap_acronym_color.svg" height="28px" /></a>'
 		), h3, "Wind events and sea ice"
 	),

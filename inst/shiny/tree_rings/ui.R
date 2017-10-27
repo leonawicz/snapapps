@@ -1,4 +1,5 @@
-addResourcePath("res", snapp_resources("images"))
+library(snaputils)
+addResourcePath("res", snap_res("images"))
 
 about <- "This web application displays plots of bootstrapped, 50-year moving average correlations between tree growth and both temperature and precipitation at various sites."
 title <- "Tree growth and climate"

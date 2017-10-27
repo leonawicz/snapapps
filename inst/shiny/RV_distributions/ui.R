@@ -1,6 +1,7 @@
 library(shiny)
 library(shinythemes)
-addResourcePath("res", snapp_resources("images"))
+library(snaputils)
+addResourcePath("res", snap_res("images"))
 
 shinyUI(fluidPage(theme=shinytheme("united"),
 	headerPanel(
