@@ -40,24 +40,25 @@ However, you may still find it much more convenient in this regard to simply for
 App information
 ---------------
 
-The list of app IDs can be obtained with `snapps`, which provides information about all of the apps in the collection. This function returns a data frame with columns that include app ID and short descriptions as well as a number of other pieces of relevant metadata.
+The list of app IDs can be obtained with `snapps`, which provides information about all of the apps in the collection. This function returns a data frame with columns that include app ID and short descriptions as well as a number of other pieces of relevant metadata. See the `snapps` help documentation or the package [vignette](https://leonawicz.github.io/snapapps/articles/snapapps.html) for details.
 
 ``` r
 snapps()
-#> # A tibble: 9 x 9
-#>          id                         name
-#>       <chr>                        <chr>
-#> 1        rv  RV distributions (official)
-#> 2       twe         Temperature and wind
-#> 3       sic             Sea ice coverage
-#> 4       siw             Sea ice and wind
-#> 5       rv1 RV distributions (legacy) v1
-#> 6       rv2 RV distributions (legacy) v2
-#> 7       rv3 RV distributions (legacy) v3
-#> 8       rv4 RV distributions (legacy) v4
-#> 9 treerings                   Tree rings
-#> # ... with 7 more variables: description <chr>, published <dbl>,
-#> #   revised <dbl>, rating <fctr>, status <chr>, url <chr>, redirect <chr>
+#> # A tibble: 9 x 10
+#>      id                         name
+#>   <chr>                        <chr>
+#> 1    rv  RV distributions (official)
+#> 2   twe         Temperature and wind
+#> 3   sic             Sea ice coverage
+#> 4   siw             Sea ice and wind
+#> 5   rv1 RV distributions (legacy) v1
+#> 6   rv2 RV distributions (legacy) v2
+#> 7   rv3 RV distributions (legacy) v3
+#> 8   rv4 RV distributions (legacy) v4
+#> 9 tring                   Tree rings
+#> # ... with 8 more variables: description <chr>, published <dbl>,
+#> #   revised <dbl>, rating <fctr>, status <chr>, aws <lgl>, url <chr>,
+#> #   redirect <chr>
 ```
 
 Accessing live versions online

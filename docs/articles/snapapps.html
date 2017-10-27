@@ -173,11 +173,37 @@
     
     
 <div class="contents">
-
+<p>For the basics of <code>snapapps</code>, see the package <a href="https://leonawicz.github.io/snapapps/">README</a>.</p>
+<div id="package-metadata" class="section level1">
+<h1 class="hasAnchor">
+<a href="#package-metadata" class="anchor"></a>Package metadata</h1>
+<p>Here is a bit more detail on the available metadata regarding apps included in <code>snapapps</code>. This can also be found in the <code>snapps</code> help documentation.</p>
+<p><code>snapps</code> returns a data frame with basic meta data for all Shiny apps in <code>snapapps</code>. This includes the following information:</p>
+<ul>
+<li>the app ID used for launching an app via <code>snapp</code>.</li>
+<li>the app name.</li>
+<li>a short description.</li>
+<li>date originally published.</li>
+<li>date most recently revised.</li>
+<li>app complexity rating: <code>beginner</code>, <code>intermediate</code>, <code>advanced</code> or <code>developer</code>.</li>
+<li>a status indicator of whether the app is <code>complete</code> or <code>partial</code> with respect to the canonical hosted app. For example, did the local app require available data sets to be reduced or removed the minimize its size in <code>snapapps</code>?</li>
+<li>an indicator of whether the app relies on publicly accessible data stored on Amazon Web Services in order to minimize package size. When possible, AWS is used to ensure a packaged app can be offered as <code>complete</code>.</li>
+<li>the canonical remote url.</li>
+<li>the redirect url.</li>
+</ul>
+<p>More content will be added to this vignette as needed.</p>
+</div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+        <div id="tocnav">
+      <h2 class="hasAnchor">
+<a href="#tocnav" class="anchor"></a>Contents</h2>
+      <ul class="nav nav-pills nav-stacked">
+<li><a href="#package-metadata">Package metadata</a></li>
+      </ul>
+</div>
       </div>
 
 </div>
