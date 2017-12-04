@@ -37,8 +37,10 @@ Imports:
     maptools,
     grid,
     apputils,
+    maputils,
     snaputils
 Remotes:
     leonawicz/apputils,
+	  leonawicz/maputils,
     leonawicz/snaputils,
     tidyverse/ggplot2

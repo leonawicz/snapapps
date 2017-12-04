@@ -12,6 +12,7 @@ addons:
 r_github_packages:
  - tidyverse/ggplot2
  - leonawicz/apputils
+ - leonawicz/maputils
  - leonawicz/snaputils
 
 after_success:

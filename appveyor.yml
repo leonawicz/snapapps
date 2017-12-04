@@ -23,6 +23,7 @@ environment:
 build_script:
   - travis-tool.sh install_github tidyverse/ggplot2
   - travis-tool.sh install_github leonawicz/apputils
+  - travis-tool.sh install_github leonawicz/maputils
   - travis-tool.sh install_github leonawicz/snaputils
   - travis-tool.sh install_deps
 
