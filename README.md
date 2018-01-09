@@ -45,20 +45,17 @@ The list of app IDs can be obtained with `snapps`, which provides information ab
 ``` r
 snapps()
 #> # A tibble: 9 x 10
-#>      id                         name
-#>   <chr>                        <chr>
-#> 1    rv  RV distributions (official)
-#> 2   twe         Temperature and wind
-#> 3   sic             Sea ice coverage
-#> 4   siw             Sea ice and wind
-#> 5   rv1 RV distributions (legacy) v1
-#> 6   rv2 RV distributions (legacy) v2
-#> 7   rv3 RV distributions (legacy) v3
-#> 8   rv4 RV distributions (legacy) v4
-#> 9 tring                   Tree rings
-#> # ... with 8 more variables: description <chr>, published <dbl>,
-#> #   revised <dbl>, rating <fctr>, status <chr>, aws <lgl>, url <chr>,
-#> #   redirect <chr>
+#>   id    name    descript~ publi~ revi~ rati~ stat~ aws   url      redirect
+#>   <chr> <chr>   <chr>      <dbl> <dbl> <fct> <chr> <lgl> <chr>    <chr>   
+#> 1 rv    RV dis~ Distribu~   2017  2017 Begi~ comp~ F     https:/~ http://~
+#> 2 twe   Temper~ Coastal ~   2013  2017 Inte~ comp~ T     https:/~ http://~
+#> 3 sic   Sea ic~ Alaska s~   2013  2017 Inte~ comp~ T     https:/~ http://~
+#> 4 siw   Sea ic~ Coastal ~   2013  2017 Inte~ comp~ T     https:/~ http://~
+#> 5 rv1   RV dis~ Distribu~   2013  2017 Begi~ comp~ F     https:/~ http://~
+#> 6 rv2   RV dis~ Distribu~   2013  2017 Begi~ comp~ F     https:/~ http://~
+#> 7 rv3   RV dis~ Distribu~   2013  2017 Begi~ comp~ F     https:/~ http://~
+#> 8 rv4   RV dis~ Distribu~   2013  2017 Begi~ comp~ F     https:/~ http://~
+#> 9 tring Tree r~ Climate ~   2013  2017 Begi~ comp~ F     https:/~ http://~
 ```
 
 Accessing live versions online
