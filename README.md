@@ -5,7 +5,7 @@ snapapps
 
 [![Travis-CI Build Status](https://travis-ci.org/leonawicz/snapapps.svg?branch=master)](https://travis-ci.org/leonawicz/snapapps) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/leonawicz/snapapps?branch=master&svg=true)](https://ci.appveyor.com/project/leonawicz/snapapps) [![Coverage Status](https://img.shields.io/codecov/c/github/leonawicz/snapapps/master.svg)](https://codecov.io/github/leonawicz/snapapps?branch=master)
 
-The `snapapps` package contains a collection of open source Shiny apps by Matthew Leonawicz at the Scenarios Network for Alaska and Arctic Planning, University of Alaska Fairbanks. It is a member package in the apps and docs sector of the SNAPverse collection of R packages. Many of the apps in this package originate from the SNAP open source Shiny apps [GitHub repository](https://github.com/ua-snap/shiny-apps). Additional apps can be found in other related packages including `snapdash`, `snapflex` and `snapdocs`.
+The `snapapps` package contains a collection of open source Shiny apps by Matthew Leonawicz at the Scenarios Network for Alaska and Arctic Planning, University of Alaska Fairbanks. It is a member package in the apps and docs sector of the [SNAPverse](https://leonawicz.github.io/snapverse/) collection of R packages. Many of the apps in this package originate from the SNAP open source Shiny apps [GitHub repository](https://github.com/ua-snap/shiny-apps). Additional apps can be found in other related packages including `snapdash`, `snapflex` and `snapdocs`.
 
 I am slowly adding more apps to this package. Like much of the SNAPverse, `snapapps` is currently an early work in progress.
 
@@ -70,3 +70,8 @@ snapp("rv4", source = "remote")
 This will again launch the app in your browser, but this time via the canonical URL. Apps hosted remotely on `shinyapps.io` generally take notably longer to load than local apps. This is another convenience of `snapapps`.
 
 One drawback is that some apps are too large to include in official form in `snapapps` as a consequence of the amount of data they use, or more likely, the amount of data they require access to. For example, an app may access data from a large data repository on Amazon Web Services using private keys that are not included in this package. For such an app to run locally, it must have a copy of the data stored with it. In order to include these apps in the package, the data is cut drastically down to almost nothing. The app will be the same, but the data it offers is a shell in comparison to the canonical version hosted online.
+
+Reference
+---------
+
+[Complete package reference and function documentation](https://leonawicz.github.io/snapapps/)
