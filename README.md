@@ -5,6 +5,11 @@ snapapps
 
 [![Travis-CI Build Status](https://travis-ci.org/leonawicz/snapapps.svg?branch=master)](https://travis-ci.org/leonawicz/snapapps) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/leonawicz/snapapps?branch=master&svg=true)](https://ci.appveyor.com/project/leonawicz/snapapps) [![Coverage Status](https://img.shields.io/codecov/c/github/leonawicz/snapapps/master.svg)](https://codecov.io/github/leonawicz/snapapps?branch=master)
 
+SNAPverse R package ecosystem development frozen.
+-------------------------------------------------
+
+*Development of the SNAPverse R package ecosystem has been frozen indefinitely. This project was never directly funded. I began it out of personal interest, but no longer work for SNAP. It will remain archived here for historical reference.*
+
 The `snapapps` package contains a collection of open source Shiny apps by Matthew Leonawicz at the Scenarios Network for Alaska and Arctic Planning, University of Alaska Fairbanks. It is a member package in the apps and docs sector of the [SNAPverse](https://leonawicz.github.io/snapverse/) collection of R packages. Many of the apps in this package originate from the SNAP open source Shiny apps [GitHub repository](https://github.com/ua-snap/shiny-apps). Additional apps can be found in other related packages including `snapdash`, `snapflex` and `snapdocs`.
 
 I am slowly adding more apps to this package. Like much of the SNAPverse, `snapapps` is currently an early work in progress.
@@ -45,17 +50,18 @@ The list of app IDs can be obtained with `snapps`, which provides information ab
 ``` r
 snapps()
 #> # A tibble: 9 x 10
-#>   id    name    descript~ publi~ revi~ rati~ stat~ aws   url      redirect
-#>   <chr> <chr>   <chr>      <dbl> <dbl> <fct> <chr> <lgl> <chr>    <chr>   
-#> 1 rv    RV dis~ Distribu~   2017  2017 Begi~ comp~ F     https:/~ http://~
-#> 2 twe   Temper~ Coastal ~   2013  2017 Inte~ comp~ T     https:/~ http://~
-#> 3 sic   Sea ic~ Alaska s~   2013  2017 Inte~ comp~ T     https:/~ http://~
-#> 4 siw   Sea ic~ Coastal ~   2013  2017 Inte~ comp~ T     https:/~ http://~
-#> 5 rv1   RV dis~ Distribu~   2013  2017 Begi~ comp~ F     https:/~ http://~
-#> 6 rv2   RV dis~ Distribu~   2013  2017 Begi~ comp~ F     https:/~ http://~
-#> 7 rv3   RV dis~ Distribu~   2013  2017 Begi~ comp~ F     https:/~ http://~
-#> 8 rv4   RV dis~ Distribu~   2013  2017 Begi~ comp~ F     https:/~ http://~
-#> 9 tring Tree r~ Climate ~   2013  2017 Begi~ comp~ F     https:/~ http://~
+#>   id    name  description published revised rating status aws   url  
+#>   <chr> <chr> <chr>           <dbl>   <dbl> <fct>  <chr>  <lgl> <chr>
+#> 1 rv    RV d~ Distributi~      2017    2017 Begin~ compl~ FALSE http~
+#> 2 twe   Temp~ Coastal Al~      2013    2017 Inter~ compl~ TRUE  http~
+#> 3 sic   Sea ~ Alaska sea~      2013    2017 Inter~ compl~ TRUE  http~
+#> 4 siw   Sea ~ Coastal Al~      2013    2017 Inter~ compl~ TRUE  http~
+#> 5 rv1   RV d~ Distributi~      2013    2017 Begin~ compl~ FALSE http~
+#> 6 rv2   RV d~ Distributi~      2013    2017 Begin~ compl~ FALSE http~
+#> 7 rv3   RV d~ Distributi~      2013    2017 Begin~ compl~ FALSE http~
+#> 8 rv4   RV d~ Distributi~      2013    2017 Begin~ compl~ FALSE http~
+#> 9 tring Tree~ Climate an~      2013    2017 Begin~ compl~ FALSE http~
+#> # ... with 1 more variable: redirect <chr>
 ```
 
 Accessing live versions online

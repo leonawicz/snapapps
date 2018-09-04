@@ -16,6 +16,10 @@ knitr::opts_chunk$set(
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/leonawicz/snapapps?branch=master&svg=true)](https://ci.appveyor.com/project/leonawicz/snapapps)
 [![Coverage Status](https://img.shields.io/codecov/c/github/leonawicz/snapapps/master.svg)](https://codecov.io/github/leonawicz/snapapps?branch=master)
 
+## SNAPverse R package ecosystem development frozen.
+
+*Development of the SNAPverse R package ecosystem has been frozen indefinitely. This project was never directly funded. I began it out of personal interest, but no longer work for SNAP. It will remain archived here for historical reference.*
+
 The `snapapps` package contains a collection of open source Shiny apps by Matthew Leonawicz at the Scenarios Network for Alaska and Arctic Planning, University of Alaska Fairbanks. It is a member package in the apps and docs sector of the [SNAPverse](https://leonawicz.github.io/snapverse/) collection of R packages. Many of the apps in this package originate from the SNAP open source Shiny apps [GitHub repository](https://github.com/ua-snap/shiny-apps). Additional apps can be found in other related packages including `snapdash`, `snapflex` and `snapdocs`.
 
 I am slowly adding more apps to this package. Like much of the SNAPverse, `snapapps` is currently an early work in progress.
